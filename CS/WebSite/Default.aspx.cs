@@ -8,8 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using DevExpress.Web.ASPxEditors;
-using DevExpress.Web.ASPxGridView;
+using DevExpress.Web;
 
 namespace ComboPopulate
 {
@@ -20,7 +19,7 @@ namespace ComboPopulate
 
         }
 
-        protected void ASPxGridView1_HtmlEditFormCreated(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewEditFormEventArgs e)
+        protected void ASPxGridView1_HtmlEditFormCreated(object sender, DevExpress.Web.ASPxGridViewEditFormEventArgs e)
         {
             if (Session["isEditForCreated"] == null)
             {

@@ -9,8 +9,7 @@ Imports System.Web.UI
 Imports System.Web.UI.WebControls
 Imports System.Web.UI.WebControls.WebParts
 Imports System.Web.UI.HtmlControls
-Imports DevExpress.Web.ASPxEditors
-Imports DevExpress.Web.ASPxGridView
+Imports DevExpress.Web
 
 Namespace ComboPopulate
 	Partial Public Class _Default
@@ -19,7 +18,7 @@ Namespace ComboPopulate
 
 		End Sub
 
-		Protected Sub ASPxGridView1_HtmlEditFormCreated(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridView.ASPxGridViewEditFormEventArgs)
+		Protected Sub ASPxGridView1_HtmlEditFormCreated(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridViewEditFormEventArgs)
 			If Session("isEditForCreated") Is Nothing Then
 				Dim currentBox As ASPxComboBox = TryCast((CType(sender, ASPxGridView)).FindEditFormTemplateControl("descrBox"), ASPxComboBox)
 				Dim index As Integer = (CType(sender, ASPxGridView)).EditingRowVisibleIndex
